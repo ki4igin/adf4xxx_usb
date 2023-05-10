@@ -108,7 +108,7 @@ const char code  EPCS_Offset_Lookup_Table[] =
 // Task dispatcher
 void main(void)
 {
-   DWORD   i,cnt;
+   DWORD   i;
    WORD   offset;
    DWORD   DevDescrLen;
    DWORD   j=0;

@@ -132,8 +132,8 @@ Write_SPI(32, 0x580005);
 Write_SPI(32, 0xBC803C);
 Write_SPI(32, 0x4B3);
 Write_SPI(32, 0x4E42);
-Write_SPI(32, 0x8008011);
-Write_SPI(32, 0x500000);
+Write_SPI(32, 0x80080C9);
+Write_SPI(32, 0x500080);
 CLRPDRF;
 
 }
