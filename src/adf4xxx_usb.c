@@ -129,11 +129,11 @@ OEB = 0x00;						//direction bits on portB, All inputs
 
 SETCE;
 Write_SPI(32, 0x580005);
-Write_SPI(32, 0xBC803C);
+Write_SPI(32, 0xB5002C);
 Write_SPI(32, 0x4B3);
 Write_SPI(32, 0x4E42);
-Write_SPI(32, 0x80080C9);
-Write_SPI(32, 0x500080);
+Write_SPI(32, 0x8008029);
+Write_SPI(32, 0xC88018);
 CLRPDRF;
 
 }
