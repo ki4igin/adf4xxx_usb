@@ -7,6 +7,7 @@
 //-----------------------------------------------------------------------------
 #include "fx2.h"
 #include "Fx2regs.h"
+#include "intrins.h"
 // #include <math.h>
 
 extern BOOL	GotSUD;			// Received setup data flag
@@ -119,6 +120,7 @@ void set_ce_pdrf(int ce_pdrf_data);
 
 void TD_Init(void) 				// Called once at startup
 {
+unsigned long i;
 Rwuen = TRUE;					// Enable remote-wakeup
 CPUCS = (CPUCS & 0xe7) | 0x10;	// 48MHz
 OEA = 0xff;						//direction bits on portA, All outputs
@@ -127,6 +129,11 @@ OEB = 0x00;						//direction bits on portB, All inputs
 
 //ContDataReady = FALSE;
 
+// delay 3 sec
+for (i = 0; i < 0x3FFFFUL; i++) {
+	_nop_( );
+}
+	
 SETCE;
 Write_SPI(32, 0x580005);
 Write_SPI(32, 0xB5002C);
